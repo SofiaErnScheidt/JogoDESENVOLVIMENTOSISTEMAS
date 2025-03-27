@@ -14,18 +14,16 @@ document.addEventListener('keypress', evento => {
         pulos++
     }
 })
-
-let personagem = {
-    x: 100,
-    y: canvas.height - 100,
-    largura: 50,
-    altura: 50,
-    velocidade_y: 0,
-    pulando: false,
-    velocidade_x: 0,
-    imagem: new Image()
-}
-
+    let personagem = {
+        x: 100,
+        y: canvas.height - 100,
+        largura: 100, 
+        altura: 100,  
+        velocidade_y: 0,
+        pulando: false,
+        velocidade_x: 0,
+        imagem: new Image()
+    }
 personagem.imagem.src= './imagem.jpg'
 
 let obstaculo = {
@@ -98,7 +96,7 @@ function atualizarObstaculo() {
 }
 
 function exibirPontuacao() {
-    ctx.fillStyle = 'green'
+    ctx.fillStyle = 'white'
     ctx.font = '20px Times New Roman'
     ctx.fillText(`Pontuação: ${pontuacao}`, 10, 30)
     ctx.fillText(`Melhor Pontuação: ${melhorPontuacao}`, 10, 60)
@@ -106,7 +104,7 @@ function exibirPontuacao() {
 
 function exibirMensagemGameOver() {
     if (gameOver) {
-        ctx.fillStyle = 'green'
+        ctx.fillStyle = 'white'
         ctx.font = '50px Times New Roman'
         ctx.fillText('GAME OVER', canvas.width / 4, canvas.height / 2)
     }
