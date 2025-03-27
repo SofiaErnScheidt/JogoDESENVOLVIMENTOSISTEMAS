@@ -17,8 +17,8 @@ document.addEventListener('keypress', evento => {
     let personagem = {
         x: 100,
         y: canvas.height - 100,
-        largura: 100, 
-        altura: 100,  
+        largura: 150, 
+        altura: 150,  
         velocidade_y: 0,
         pulando: false,
         velocidade_x: 0,
